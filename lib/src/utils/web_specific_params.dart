@@ -1,8 +1,6 @@
-import 'package:webviewx_plus/src/utils/utils.dart';
+import 'package:webviewx_web/src/utils/utils.dart';
 
 /// Parameters specific to the web version.
-///
-/// This may merge with [MobileSpecificParams] in the future.
 class WebSpecificParams {
   /// Proxies are used to bypass a website's iFrame embedding restrictions
   final List<BypassProxy> _proxyList;

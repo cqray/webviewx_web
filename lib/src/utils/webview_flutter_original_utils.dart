@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-import 'package:webviewx_plus/src/utils/source_type.dart';
+import 'package:webviewx_web/src/utils/source_type.dart';
 
 /// A copy from the original webview's navigation delegate typedef
 typedef NavigationDelegate = FutureOr<NavigationDecision> Function(

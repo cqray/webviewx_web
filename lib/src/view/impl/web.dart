@@ -8,13 +8,13 @@ import 'dart:js' as js;
 import 'package:flutter/material.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 
-import 'package:webviewx_plus/src/controller/impl/web.dart';
-import 'package:webviewx_plus/src/controller/interface.dart' as ctrl_interface;
-import 'package:webviewx_plus/src/utils/constants.dart';
-import 'package:webviewx_plus/src/utils/dart_ui_fix.dart' as ui;
-import 'package:webviewx_plus/src/utils/logger.dart';
-import 'package:webviewx_plus/src/utils/utils.dart';
-import 'package:webviewx_plus/src/view/interface.dart' as view_interface;
+import 'package:webviewx_web/src/controller/impl/web.dart';
+import 'package:webviewx_web/src/controller/interface.dart' as ctrl_interface;
+import 'package:webviewx_web/src/utils/constants.dart';
+import 'package:webviewx_web/src/utils/dart_ui_fix.dart' as ui;
+import 'package:webviewx_web/src/utils/logger.dart';
+import 'package:webviewx_web/src/utils/utils.dart';
+import 'package:webviewx_web/src/view/interface.dart' as view_interface;
 
 /// Web implementation
 class WebViewX extends StatefulWidget implements view_interface.WebViewX {
@@ -99,16 +99,8 @@ class WebViewX extends StatefulWidget implements view_interface.WebViewX {
   final void Function(WebResourceError error)? onWebResourceError;
 
   /// Parameters specific to the web version.
-  /// This may eventually be merged with [mobileSpecificParams],
-  /// if all features become cross platform.
   @override
   final WebSpecificParams webSpecificParams;
-
-  /// Parameters specific to the web version.
-  /// This may eventually be merged with [webSpecificParams],
-  /// if all features become cross platform.
-  @override
-  final MobileSpecificParams mobileSpecificParams;
 
   /// Constructor
   const WebViewX({
@@ -130,7 +122,6 @@ class WebViewX extends StatefulWidget implements view_interface.WebViewX {
     this.navigationDelegate,
     this.onWebResourceError,
     this.webSpecificParams = const WebSpecificParams(),
-    this.mobileSpecificParams = const MobileSpecificParams(),
   }) : super(key: key);
 
   @override

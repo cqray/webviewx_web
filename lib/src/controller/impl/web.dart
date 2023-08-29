@@ -4,10 +4,10 @@ import 'dart:js' as js;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:webviewx_plus/src/controller/interface.dart' as i;
-import 'package:webviewx_plus/src/utils/logger.dart';
-import 'package:webviewx_plus/src/utils/utils.dart';
-import 'package:webviewx_plus/src/utils/web_history.dart';
+import 'package:webviewx_web/src/controller/interface.dart' as i;
+import 'package:webviewx_web/src/utils/logger.dart';
+import 'package:webviewx_web/src/utils/utils.dart';
+import 'package:webviewx_web/src/utils/web_history.dart';
 
 /// Web implementation
 class WebViewXController extends ChangeNotifier

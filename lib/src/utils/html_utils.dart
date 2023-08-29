@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:typed_data';
 import 'package:path/path.dart' as p;
 import 'package:uuid/uuid.dart';
-import 'package:webviewx_plus/src/utils/constants.dart';
-import 'package:webviewx_plus/src/utils/embedded_js_content.dart';
+import 'package:webviewx_web/src/utils/constants.dart';
+import 'package:webviewx_web/src/utils/embedded_js_content.dart';
 
 /// Specifies where to embed ("burn") the javascript inside the HTML source
 enum EmbedPosition {
@@ -67,15 +67,7 @@ class HtmlUtils {
     if (jsContent.isNotEmpty) {
       final jsContentStrings = <String>{};
       for (final jsToEmbed in jsContent) {
-        if (jsToEmbed.js != null) {
-          jsContentStrings.add(jsToEmbed.js!);
-        } else {
-          if (forWeb && jsToEmbed.webJs != null) {
-            jsContentStrings.add(jsToEmbed.webJs!);
-          } else {
-            jsContentStrings.add(jsToEmbed.mobileJs!);
-          }
-        }
+        jsContentStrings.add(jsToEmbed.js);
       }
       _src = embedJsInHtmlSource(_src, jsContentStrings);
     }

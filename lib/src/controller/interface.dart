@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:webviewx_plus/src/utils/source_type.dart';
-import 'package:webviewx_plus/src/utils/webview_content_model.dart';
+import 'package:webviewx_web/src/utils/source_type.dart';
+import 'package:webviewx_web/src/utils/webview_content_model.dart';
 
 /// Interface for controller
 abstract class WebViewXController<T> {

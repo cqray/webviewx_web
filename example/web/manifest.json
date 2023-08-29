@@ -1,6 +1,6 @@
 {
-    "name": "webviewx_plus_example",
-    "short_name": "webviewx_plus_example",
+    "name": "webviewx_web_example",
+    "short_name": "webviewx_web_example",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -4,8 +4,9 @@
 </p>
 
 
+A feature-rich webview using [iframe](https://api.flutter.dev/flutter/dart-html/IFrameElement-class.html) for web. JS interop-ready.
 
-A feature-rich cross-platform webview using [webview_flutter](https://pub.dev/packages/webview_flutter) for mobile and [iframe](https://api.flutter.dev/flutter/dart-html/IFrameElement-class.html) for web. JS interop-ready.
+PS:项目来源于[webviewx_plus](https://github.com/Mahad61/webviewx_plus)，根据自我需求修改、并移除Android、IOS支持，该版本仅支持web。
 
 ## Getting started
 
@@ -23,22 +24,6 @@ A feature-rich cross-platform webview using [webview_flutter](https://pub.dev/pa
 
 <div style="text-align: center">
     <table>
-        <tr>
-        </td>
-            <td style="text-align: center;font-size: 22px">
-                <p> Mobile</p>
-            </td>
-            <td style="text-align: center">
-                <a href="https://raw.githubusercontent.com/Mahad61/webviewx_plus/main/doc/gif/iphone.gif">
-                    <img src="https://raw.githubusercontent.com/Mahad61/webviewx_plus/main/doc/gif/iphone.gif" width="200"/>
-                </a>
-            </td>            
-            <td style="text-align: center">
-                <a href="https://raw.githubusercontent.com/Mahad61/webviewx_plus/main/doc/gif/android.gif">
-                    <img src="https://raw.githubusercontent.com/Mahad61/webviewx_plus/main/doc/gif/android.gif" width="200"/>
-                </a>
-            </td>
-        </tr>
         <tr>
              <td style="text-align: center;font-size: 22px">
                 <p> Web</p>
@@ -82,11 +67,11 @@ WebViewX(
 ## **Important !**
 
 If you need to add other widgets on top of the webview (e.g. inside a Stack widget), you _**MUST**_ wrap those widgets with a **WebViewAware** widget.
-This does nothing on mobile, but on web it allows widgets on top to intercept gestures. Otherwise, those widgets may not be clickable and/or the iframe will behave weird (unexpected refresh/reload - this is a well known issue).
+it allows widgets on top to intercept gestures. Otherwise, those widgets may not be clickable and/or the iframe will behave weird (unexpected refresh/reload - this is a well known issue).
 
 Also, if you add widgets on top of the webview, wrap them and then you notice that the iframe still reloads unexpectedly, you should check if there are other widgets that sit on top without being noticed, or try to wrap InkWell, GestureRecognizer or Button widgets to see which one causes the problem.
 
-### **3.** Interact with the controller (run the [example app](https://github.com/Mahad61/webviewx_plus/tree/main/example) to check out some use cases)
+### **3.** Interact with the controller (run the [example app](https://github.com/Mahad61/webviewx_web/tree/main/example) to check out some use cases)
 
 ```dart
 webviewController.loadContent(
@@ -125,10 +110,6 @@ Note: For more detailed information about things such as `EmbeddedJsContent`, pl
 | `void Function(String src)?` onPageFinished                 | Callback that gets executed when a page finishes loading                                                                                            |
 | `NavigationDelegate?` navigationDelegate                    | Callback that, if not null, gets executed when the user clicks something in the webview (on Web it only works for `SourceType.urlBypass`, for now)  |
 | `void Function(WebResourceError error)?` onWebResourceError | Callback that gets executed when there is an error when loading resources  issues on web                              |
-| `WebSpecificParams` webSpecificParams                       | This is an object that contains web-specific options. Theese are not available on mobile (_yet_)                                                    |
-| `MobileSpecificParams` mobileSpecificParams                 | This is an object that contains mobile-specific options. Theese are not available on web (_yet_)                                                    |
-
----
 
 - ## Controller properties
 
@@ -156,30 +137,3 @@ Note: For more detailed information about things such as `EmbeddedJsContent`, pl
 | Scrolls exactly to the position `(x, y)`                  | webviewController.`scrollTo(int x, int y)`                                                     |
 | Retrieves the inner page title                            | webviewController.`getTitle()`                                                                 |
 | Clears cache                                              | webviewController.`clearCache()`                                                               |
-
-## Contribution
-
-Any help from the open-source community is always welcome and needed:
-
--   Found an issue?
-    
-    -   Please fill a bug report with details.
--   Wish a feature?
-    
-    -   Open a feature request with use cases.
--   Are you using and liking the project?
-    
-    -   Promote the project: create an article, do a post or make a donation.
--   Are you a developer?
-    
-    -   Fix a bug and send a pull request.
-    -   Implement a new feature.
--   Have you already helped in any way?
-    
-    -   **Many thanks from me, the contributors and everybody that uses this project!**
-
- 
-
-## Credits
-
-This package has updated the    [webviewx](https://github.com/adrianflutur/webviewx)  code and fixed a few issues as it isn't  remain updated.

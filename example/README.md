@@ -1,4 +1,4 @@
-# webviewx_plus_example
+# webviewx_web_example
 
 A new Flutter project.
 

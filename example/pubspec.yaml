@@ -1,4 +1,4 @@
-name: webviewx_plus_example
+name: webviewx_web_example
 description: A new Flutter project.
 
 publish_to: "none"
@@ -13,7 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  webviewx_plus:
+  webviewx_web:
     path: ../
 
 dev_dependencies:

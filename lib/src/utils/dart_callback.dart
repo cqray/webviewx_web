@@ -24,15 +24,6 @@
 /// Unique_Name_Here('test');
 /// ```
 ///
-///
-/// Calling Dart from JS, on Mobile:
-///
-/// ```javascript
-/// Unique_Name_Here.postMessage('test');
-///
-/// ```
-/// For more about the Web and Mobile different call types see [EmbeddedJsContent]
-///
 class DartCallback {
   /// Callback's name
   ///

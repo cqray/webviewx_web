@@ -1,5 +1,5 @@
-import 'package:webviewx_plus/src/utils/utils.dart';
-import 'package:webviewx_plus/src/controller/interface.dart';
+import 'package:webviewx_web/src/utils/utils.dart';
+import 'package:webviewx_web/src/controller/interface.dart';
 
 /// Interface for widget
 abstract class WebViewX {
@@ -68,14 +68,7 @@ abstract class WebViewX {
   final void Function(WebResourceError error)? onWebResourceError;
 
   /// Parameters specific to the web version.
-  /// This may eventually be merged with [mobileSpecificParams],
-  /// if all features become cross platform.
   final WebSpecificParams webSpecificParams;
-
-  /// Parameters specific to the web version.
-  /// This may eventually be merged with [webSpecificParams],
-  /// if all features become cross platform.
-  final MobileSpecificParams mobileSpecificParams;
 
   // /// Constructor
   const WebViewX({
@@ -96,6 +89,5 @@ abstract class WebViewX {
     this.navigationDelegate,
     this.onWebResourceError,
     this.webSpecificParams = const WebSpecificParams(),
-    this.mobileSpecificParams = const MobileSpecificParams(),
   });
 }
